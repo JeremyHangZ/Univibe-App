@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 当输入框获取焦点时的样式 -->
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="#FFFFFF"/> <!-- 输入框的背景颜色 -->
+            <stroke android:width="2dp" android:color="#FF6200EE"/> <!-- 高亮的边框颜色 -->
+            <corners android:radius="16dp"/> <!-- 圆角半径 -->
+        </shape>
+    </item>
+
+    <!-- 当输入框未获取焦点时的样式 -->
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF"/> <!-- 输入框的背景颜色 -->
+            <stroke android:width="2dp" android:color="#CCCCCC"/> <!-- 普通的边框颜色 -->
+            <corners android:radius="16dp"/> <!-- 圆角半径 -->
+        </shape>
+    </item>
+</selector>

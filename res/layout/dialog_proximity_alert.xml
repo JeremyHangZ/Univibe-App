@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginVertical="60dp"
+    android:layout_marginHorizontal="13dp"
+    android:background="@drawable/dialog_background">
+
+    <!-- 顶部关闭按钮 -->
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_close"
+        android:contentDescription="Close" />
+
+
+    <TextView
+        android:id="@+id/alert_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:text="Friend Near You"/>
+
+    <!-- 提醒消息 -->
+
+
+    <!-- 好友头像 -->
+    <ImageView
+        android:id="@+id/avatar_image_view"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_avatar" />
+
+    <TextView
+        android:id="@+id/friend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+
+    <!-- Google Maps fragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map_container"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/ic_map" />
+
+
+    <!-- 快捷操作按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/navigate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/melbourne_blue"
+            android:text="Navigate"
+            android:textColor="@android:color/white"
+            android:drawableRight="@drawable/ic_navigation"
+            android:layout_marginEnd="16dp"/>
+
+        <Button
+            android:id="@+id/message_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/melbourne_blue"
+            android:text="Message"
+            android:textColor="@android:color/white"
+            android:drawableRight="@drawable/ic_send" />
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 阴影层 -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#55000000"/> <!-- 阴影颜色 (透明的黑色) -->
+        </shape>
+    </item>
+
+    <!-- 实际的圆形背景层 -->
+    <item android:left="2dp" android:right="2dp" android:top="2dp" android:bottom="2dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF"/> <!-- 背景颜色 (白色) -->
+            <stroke android:width="2dp" android:color="#CCCCCC"/> <!-- 圆形边框 -->
+        </shape>
+    </item>
+</layer-list>

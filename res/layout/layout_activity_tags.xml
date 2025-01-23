@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <!-- 创建新标签 -->
+    <TextView
+        android:id="@+id/textViewCreateTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a Tag"
+        android:textSize="18sp"
+        android:textColor="@color/title_black"
+        android:paddingBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextNewTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter New Tag Name :)"
+        android:background="@drawable/edittext_rounded_background"
+        android:minHeight="48dp"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/buttonCreateTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a Tag"
+        style="@style/roundedButton"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <!-- 加入现有标签 -->
+    <TextView
+        android:id="@+id/textViewJoinTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Join / Quit A Tag"
+        android:textSize="18sp"
+        android:textColor="@color/title_black"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextJoinTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Tag Name :)"
+        android:background="@drawable/edittext_rounded_background"
+        android:minHeight="48dp"
+        android:padding="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+
+        <!-- 加入标签按钮 -->
+        <Button
+            android:id="@+id/buttonJoinTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join Tag"
+            style="@style/roundedButton"
+            android:layout_gravity="center_horizontal"
+            android:padding="8dp"/>
+
+        <!-- 退出标签按钮 -->
+        <Button
+            android:id="@+id/buttonLeaveTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quit Tag"
+            style="@style/roundedButton"
+            android:layout_gravity="center_horizontal"
+            android:padding="8dp"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+    <!-- 已注册标签 -->
+    <TextView
+        android:id="@+id/textViewRegisteredTags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registered Tags"
+        android:textSize="18sp"
+        android:textColor="@color/title_black"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutRegisteredTags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- 动态添加用户注册的标签项 -->
+
+    </LinearLayout>
+
+    <!-- 浏览未注册的标签 -->
+    <TextView
+        android:id="@+id/textViewUnregisteredTags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other Unregistered Tags"
+        android:textSize="18sp"
+        android:textColor="@color/title_black"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutUnregisteredTags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,233 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 显示头像，圆形并带阴影效果 -->
+        <ImageView
+            android:id="@+id/imageViewAvatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:src="@drawable/default_avatar"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/circular_background_with_shadow" />
+
+        <!-- 上传进度条 -->
+        <ProgressBar
+            android:id="@+id/uploadProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:max="100"
+            android:visibility="gone"
+            android:layout_marginTop="8dp" />
+
+        <!-- 上传头像按钮，圆角并带渐变效果 -->
+        <Button
+            android:id="@+id/buttonUploadAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/roundedButton"
+            android:text="Upload Avatar"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 性别选择 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a Gender"
+            android:textSize="16sp"
+            android:textColor="@color/title_black"
+            android:layout_marginTop="0dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:layout_marginTop="8dp">
+            <Spinner
+                android:id="@+id/spinnerGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownWidth="fill_parent"
+                android:entries="@array/gender_options"
+                android:spinnerMode="dropdown"
+                android:minHeight="48dp" />
+        </FrameLayout>
+
+        <!-- 个人基础信息 -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Name"
+                android:background="@drawable/edittext_rounded_background"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/editTextAge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Age"
+                android:inputType="number"
+                android:background="@drawable/edittext_rounded_background"
+                android:padding="12dp" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/editTextBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Birthday (yyyy-mm-dd)"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/edittext_background_selector"
+            android:layout_marginTop="8dp"
+            android:padding="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Academic Information"
+            android:textSize="16sp"
+            android:textColor="@color/title_black"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/editTextMajor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Major"
+                android:background="@drawable/edittext_rounded_background"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/editTextDegree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Degree"
+                android:background="@drawable/edittext_rounded_background"
+                android:padding="12dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextDepartment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Department"
+            android:background="@drawable/edittext_rounded_background"
+            android:layout_marginTop="8dp"
+            android:padding="12dp" />
+
+        <!-- 图片上传部分，增加视觉效果 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Photos (capped at 3)"
+            android:textSize="16sp"
+            android:textColor="@color/title_black"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView_photo_1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/photo_background_shadow"
+                android:src="@drawable/image_holder" />
+
+            <ImageView
+                android:id="@+id/imageView_photo_2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/photo_background_shadow"
+                android:src="@drawable/image_holder" />
+
+            <ImageView
+                android:id="@+id/imageView_photo_3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/photo_background_shadow"
+                android:src="@drawable/image_holder" />
+        </LinearLayout>
+
+        <!-- 进度条 -->
+        <ProgressBar
+            android:id="@+id/uploadPhotoProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/buttonSubmitDetails"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Submit Details"
+                style="@style/roundedButton"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/buttonSkip"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Skip"
+                style="@style/roundedButton"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+

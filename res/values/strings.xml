@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UniVibe</string>
+    <string name="title_activity_main_activity.java">MainActivity.java</string>
+    <string name="register_prompt">Don\'t have an account? <u>Register</u></string>
+    <string name="login_prompt">Already have an account? <u>Login</u></string>
+    <string name="tag_with_bullet">• %1$s</string>
+
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+</resources>

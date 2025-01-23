@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewAvatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/circular_background_with_shadow"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_avatar" />
+        <TextView
+            android:id="@+id/friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Friend Name"
+            android:layout_marginStart="8dp"
+            android:textSize="30sp"
+            android:textColor="@color/title_black"/>
+
+        <TextView
+            android:id="@+id/select_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="@color/title_black"
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            >
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/visibility_switch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:text="Visibility"
+                android:padding="10dp"
+                android:background="@color/button_back"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/share_location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:text="Share Location"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/button_back"/>
+
+            <Button
+                android:id="@+id/button_set_tags"
+                style="@style/SettingButton"
+                android:text="Update Your Tags"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_tag" />
+
+            <Button
+                android:id="@+id/button_change_info"
+                style="@style/SettingButton"
+                android:text="Edit Personal Info"
+                android:drawableLeft="@drawable/ic_edit" />
+
+            <Button
+                android:id="@+id/button_delete_account"
+                style="@style/SettingButton"
+                android:text="Delete Account"
+                android:drawableLeft="@drawable/ic_delete_forever" />
+
+            <Button
+                android:id="@+id/button_logout"
+                style="@style/SettingButton"
+                android:text="Logout"
+                android:drawableLeft="@drawable/ic_logout" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+

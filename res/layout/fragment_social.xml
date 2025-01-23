@@ -1,0 +1,108 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 好友请求按钮，靠右放置 -->
+    <Button
+        android:id="@+id/button_view_friend_requests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/roundedButton"
+        android:text="View New Requests"
+        android:layout_gravity="right" />
+
+    <TextView
+        android:id="@+id/social_tital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Shake To Connect"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/melbourne_blue"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/shake_image"
+        android:layout_width="330dp"
+        android:layout_height="230dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/shake" />
+
+    <TextView
+        android:id="@+id/select_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a Tag to filter users"
+        android:textColor="@color/title_black"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_grey"
+        android:layout_marginBottom="8dp">
+        <Spinner
+            android:id="@+id/tag_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dropDownWidth="fill_parent"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown" />
+    </FrameLayout>
+
+    <!-- 显示Tag注册人数 -->
+    <TextView
+        android:id="@+id/tag_user_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Users: 0"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp" />
+
+    <!-- 添加好友的输入框 -->
+    <EditText
+        android:id="@+id/add_friend_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add Friend by Email"
+        android:background="@drawable/friend_search_background"
+        android:drawableLeft="@drawable/ic_friend_search"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- 添加好友的按钮 -->
+    <Button
+        android:id="@+id/button_add_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/roundedButton"
+        android:text="Send Friend Request"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 用于显示好友请求的线性布局 -->
+    <ScrollView
+        android:id="@+id/friend_requests_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <!-- 需要添加一个子布局容器，例如 LinearLayout -->
+        <LinearLayout
+            android:id="@+id/friend_requests_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>
